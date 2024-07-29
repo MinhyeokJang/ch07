@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function chk() {
+		if(!frm.title.value) {
+			alert("제목을 안적고 할거니? 진짜?");
+			frm.title.focus();
+			return false;
+		}
+		if(!frm.writer.value) {
+			alert("너 이름이 뭐니?");
+			frm.writer.focus();
+			return false;
+		}
+		if(!frm.content.value) {
+			alert("내용은? 기가 찬다야~");
+			frm.content.focus();
+			return false;
+		}
+		return true;
+	}
+
+</script>
+<!-- <style type="text/css">
+	table,tr,td {
+		border: 1px solid black;
+	}
+</style> -->
+</head>
+<body>
+	<h1>게시판</h1>
+	<form action="Board" name="frm" method="post" onsubmit="return chk()">
+	<table border="1">
+		<tr>
+			<td>제목</td>
+			<td><input type="text" name="title"></td>
+		</tr>
+		<tr>
+			<td>작성자</td>
+			<td><input type="text" name="writer"></td>
+		</tr>
+		<tr>
+			<td>내용</td>
+			<td><textarea rows="10" cols="40" name="content"></textarea></td>
+		</tr>
+		<tr>
+			<td colspan="2"><input type="submit" value="완료"></td>
+		</tr>
+	</table>
+	</form>
+</body>
+</html>
